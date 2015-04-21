@@ -1,9 +1,0 @@
-<h1>All contributors</h1>
-
-<h2><%= link_to "Create a new contributor profile", user_path(:new) %></h2>
-
-<ul>
-  <% @users.each do |user| %>
-  <li><%= link_to user.name, user_path(user) %>,  (<%= user.age %>), <%= user.occupation %></li>
-  <% end %>
-</ul>

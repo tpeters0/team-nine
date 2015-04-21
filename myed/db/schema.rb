@@ -11,23 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421005709) do
+ActiveRecord::Schema.define(version: 20150421144609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "stories", force: :cascade do |t|
-    t.string   "category"
-    t.text     "heading"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  add_index "stories", ["user_id"], name: "index_stories_on_user_id", using: :btree
-
-  create_table "users", force: :cascade do |t|
+  create_table "profiles", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
     t.text     "occupation"
@@ -35,5 +24,18 @@ ActiveRecord::Schema.define(version: 20150421005709) do
     t.datetime "updated_at"
   end
 
-  add_foreign_key "stories", "users"
+  create_table "stories", force: :cascade do |t|
+    t.string   "category"
+    t.text     "heading"
+    t.text     "body"
+    t.text     "lesson"
+    t.text     "photo_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "profile_id"
+  end
+
+  add_index "stories", ["profile_id"], name: "index_stories_on_profile_id", using: :btree
+
+  add_foreign_key "stories", "profiles"
 end
