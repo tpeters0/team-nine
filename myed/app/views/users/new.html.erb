@@ -1,0 +1,24 @@
+<h1>Create a new contributor profile</h1>
+
+<%= form_for @user do |f| %>
+
+<div>
+<%= f.label       :name %>
+<%= f.text_field  :name %>
+</div>
+
+<div>
+<%= f.label       :age %>
+<%= f.text_field  :age %>
+</div>
+
+<div>
+<%= f.label       :occupation %>
+<%= f.text_field  :occupation %>
+</div>
+
+<div>
+<%= f.submit %>
+</div>
+
+<% end %>
