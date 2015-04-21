@@ -7,11 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>
+      <%= link_to "MyEd", root_path, :class => "list" %>
+    </h1>
+
+    <ul>
+      <li><%= link_to "Browse Stories", stories_path, :class => "list" %></li>
+      <li><%= link_to "Browse Profiles", profiles_path, :class => "list" %></li>
+      <li><%= link_to "Add your Story", new_story_path, :class => "list" %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "list" %></li>
+    </ul>
+
+  </header>
 
 <%= yield %>
 
 </body>
-<footer>
-  <%= link_to "Home", '/' %>
-</footer>  
+
 </html>
