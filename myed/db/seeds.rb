@@ -1,7 +1,7 @@
-User.destroy_all
+Profile.destroy_all
 Story.destroy_all
 
-users = [
+profiles = [
   {
     name: "Smokey t. B.",
     age: 71,
@@ -29,6 +29,6 @@ users = [
   }
   ]
 
-users.each do |user_hash|
-  User.create!(user_hash)
-end  
+profiles.each do |profile_hash|
+  Profile.create!(profile_hash)
+end
