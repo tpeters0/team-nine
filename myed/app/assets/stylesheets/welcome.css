@@ -1,0 +1,37 @@
+body {
+  background-image: url("http://kalamu.com/neogriot/wp-content/uploads/2014/11/dont-get-01.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #FFFF33;
+  font-size: 100px;
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 10px 39%;
+    margin: 0px;
+}
+
+li {
+  padding: 1%;
+  margin: 0px;
+
+}
+
+a.list {
+  font-family: "Verdana", sans-serif;
+  font-size: 25px;
+  border: 1px solid white;
+  display: inline-block;
+  color: white;
+  background-color: #6600FF;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
