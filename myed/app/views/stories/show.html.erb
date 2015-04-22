@@ -1,0 +1,8 @@
+<h1><%= @story.heading %></h1>
+<h2>Author: <%= link_to @story.profile.name, profile_path(@story.profile) %></h2>
+<ul>
+  <li>Category: <%= @story.category %></li>
+  <li>Moment: <%= @story.body %></li>
+  <li>Lesson(s) Learned: <%= @story.lesson %></li>
+</ul>
+<img src="<%= @story.photo_url %>">
