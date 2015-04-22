@@ -1,0 +1,10 @@
+<h1>All stories</h1>
+
+<h2>Sort by category</h2>
+
+
+<ul>
+  <% @stories.each do |story| %>
+  <li><%= link_to story.heading, story_path(story) %>, Category: <%= link_to story.category.name, category_path(story.category) %></li>
+  <% end %>
+</ul>

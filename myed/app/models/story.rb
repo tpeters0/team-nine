@@ -1,5 +1,7 @@
 class Story < ActiveRecord::Base
   belongs_to :profile
+  belongs_to :user
+  belongs_to :category
 
-  validates :category, :heading, :body, {presence: true}
+  validates :heading, :body, {presence: true}
 end
