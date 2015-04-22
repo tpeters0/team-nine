@@ -2,6 +2,7 @@ class StoriesController < ApplicationController
 
   def index
     @stories = Story.all
+    @categories = Category.all
   end
 
   def show
@@ -19,6 +20,12 @@ class StoriesController < ApplicationController
       else
         render(:new)
       end
+  end
+
+  def destroy
+    @story = Story.find(params[:id])
+    @story.destroy
+    redirect_to 'welcome#index'
   end
 
   private

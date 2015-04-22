@@ -2,11 +2,20 @@
 
 <h2>Age: <%= @profile.age %></h2>
 <h2>Occupation: <%= @profile.occupation %></h2>
-
+<img src="<%= @profile.image %>">
 <h2>Moments:</h2>
 
 <ul>
   <% @profile.stories.each do |story| %>
-    <li><%= link_to story.heading, story_path(story) %></li>
+    <li><%= link_to story.heading, story_path(story) %> - Topic: <%= story.category.name %></li>
   <% end %>
 </ul>
+
+<div class='profile-actions'>
+
+  <form action="<%= profile_path(@profile) %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+  </form>
+
+</div>
