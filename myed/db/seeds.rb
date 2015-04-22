@@ -35,21 +35,11 @@ profiles.each do |profile_hash|
 end
 
 categories = [
-  {
-    name: "Volunteering"
-  },
-  {
-    name: "Other"
-  },
-  {
-    name: "Vocational Training"
-  },
-  {
-    name: "Cultural Exposure"
-  },
-  {
-    name: "Interpersonal Relationships"
-  }
+  {  name: "Volunteering"},
+  {  name: "Vocational Training"},
+  {  name: "Cultural Exposure"},
+  {  name: "Interpersonal Relationships"},
+  {  name: "Other"}
 ]
 
 categories.each do |category_hash|

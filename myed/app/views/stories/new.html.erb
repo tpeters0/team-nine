@@ -3,8 +3,17 @@
 <%= form_for @story do |f| %>
 
 <div>
-<%= f.label       :category %>
-<%= f.text_field  :category %>
+  <select name="category_id">
+     <%= @category.each do |category| %>
+       <option value="<%= category.id %>"><%= category.name %></option>
+     <% end %>
+   </select>
+
+
+
+
+<!-- #<%= f.label       :category %>
+<%= f.text_field  :category %> -->
 </div>
 
 <div>

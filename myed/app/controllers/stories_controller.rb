@@ -9,6 +9,7 @@ class StoriesController < ApplicationController
   end
 
   def new
+    @category = Category.all
     @story = Story.new
   end
 
