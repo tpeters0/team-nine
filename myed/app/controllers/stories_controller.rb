@@ -1,5 +1,7 @@
 class StoriesController < ApplicationController
 
+  before_action :existing_user, only: [:create, :new, :destroy]
+
   def index
     @stories = Story.all
     @categories = Category.all
@@ -22,6 +24,8 @@ class StoriesController < ApplicationController
       end
   end
 
+
+
   def destroy
     @story = Story.find(params[:id])
     @story.destroy
@@ -32,6 +36,16 @@ class StoriesController < ApplicationController
 
   def story_params
     params.require(:story).permit(:category, :heading, :body)
+  end
+
+  def existing_user
+    if current_user && (Profile.find_by(user_id: current_user.id) != nil)
+      render(:new)
+    elsif current_user && (Profile.find_by(user_id: current_user.id) == nil)
+      redirect_to(new_profile_path)
+    else
+      redirect_to(new_user_registration_path)
+    end
   end
 
 end
