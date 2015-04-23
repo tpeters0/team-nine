@@ -4,6 +4,6 @@
 
 <ul>
   <% @category.stories.each do |story| %>
-  <li>  <%= link_to story.heading, category_story_path(:category_id, story) %> </li>
+  <li>  <%= link_to story.heading, story_path(story) %> </li>
   <% end %>
 </ul>

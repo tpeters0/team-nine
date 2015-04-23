@@ -12,7 +12,6 @@ class StoriesController < ApplicationController
 
   def new
     @category_options = Category.all.map{|c| [ c.name, c.id ] }
-    @category = Category.find(params[:category_id])
     @story = Story.new
   end
 
@@ -20,7 +19,7 @@ class StoriesController < ApplicationController
     @story = Story.new(story_params)
 
       if @story.save
-        redirect_to(category_story_path(@story.category ,@story))
+        redirect_to(story_path(@story))
       else
         render(:new)
       end
