@@ -1,3 +1,9 @@
 <h1><%= @category.name %></h1>
 
 <h2><%= @category.name %> Moments</h2>
+
+<ul>
+  <% @category.stories.each do |story| %>
+  <li>  <%= link_to story.heading, category_story_path(:category_id, story) %> </li>
+  <% end %>
+</ul>

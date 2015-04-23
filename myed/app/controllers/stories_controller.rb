@@ -6,13 +6,13 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:category_id])
+    @category = Category.find(params[:id])
     @story = Story.find(params[:id])
   end
 
   def new
-    @category = Category.find(params[:category_id])
     @category_options = Category.all.map{|c| [ c.name, c.id ] }
+    @category = Category.find(params[:category_id])
     @story = Story.new
   end
 

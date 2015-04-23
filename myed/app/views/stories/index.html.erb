@@ -5,9 +5,9 @@
 
 <ul>
   <% @categories.each do |category| %>
-    <% @stories.each do |story| %>
-    <li>  <%= link_to story.heading, category_story_path(category, story) %> </li>
-    <% end %>
+      <% @stories.each do |story| %>
+      <li>  <%= link_to story.heading, category_story_path(category, story) %> </li>
+      <% end %>
   <% end %>
 
 
