@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
   end
 
   def new
-    @profile = Profile.new
+    @profile = current_user.build_profile
   end
 
   def create
@@ -21,10 +21,26 @@ class ProfilesController < ApplicationController
       end
   end
 
+  def edit
+    @profile = Profile.find(params[:id])
+  end
+
+  def update
+    @profile = Profile.find(params[:id])
+    @profile.update(profile_params)
+    redirect_to(@profile)
+  end
+
+  def destroy
+    @profile = Profile.find(params[:id])
+    @profile.destroy
+    redirect_to 'welcome#index'
+  end
+
   private
 
   def profile_params
-    params.require(:profile).permit(:name, :age, :occupation)
+    params.require(:profile).permit(:name, :age, :occupation, :image, :user_id)
   end
 
 end

@@ -2,9 +2,18 @@
 
 <h2>Sort by category</h2>
 
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= link_to category.name, category_path(category) %></li>
+  <% end %>
+</ul>
+
+<h2>All moments</h2>
 
 <ul>
   <% @stories.each do |story| %>
+
   <li><%= link_to story.heading, story_path(story) %> Category: <%= link_to story.category.name, category_path(story.category) %></li>
+
   <% end %>
 </ul>

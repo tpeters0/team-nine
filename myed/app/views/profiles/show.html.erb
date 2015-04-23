@@ -2,7 +2,7 @@
 
 <h2>Age: <%= @profile.age %></h2>
 <h2>Occupation: <%= @profile.occupation %></h2>
-
+<img src="<%= @profile.image %>">
 <h2>Moments:</h2>
 
 <ul>
@@ -10,3 +10,14 @@
     <li><%= link_to story.heading, story_path(story) %></li>
   <% end %>
 </ul>
+
+<div class='profile-actions'>
+
+  <a href="/profiles/<%= @profile.id %>/edit">Edit</a>
+
+  <form action="<%= profile_path(@profile) %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="delete">
+  </form>
+
+</div>

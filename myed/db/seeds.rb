@@ -39,7 +39,7 @@ categories = [
     name: "Volunteering"
   },
   {
-    name: "Other"
+    name: "Interpersonal Relationships"
   },
   {
     name: "Vocational Training"
@@ -48,7 +48,7 @@ categories = [
     name: "Cultural Exposure"
   },
   {
-    name: "Interpersonal Relationships"
+    name: "Other"
   }
 ]
 
