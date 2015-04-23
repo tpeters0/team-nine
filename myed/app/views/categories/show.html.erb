@@ -7,3 +7,16 @@
   <li>  <%= link_to story.heading, story_path(story) %> </li>
   <% end %>
 </ul>
+
+<h3> Find out more about <%="#{@category.name.downcase}" %> </h3>
+
+<ul>
+
+  <% counter = 0 %>
+  <% while counter < @links.length %>
+      <li>
+        <a href="<%= @links[counter][:link] %>" ><%="#{@links[counter][:site]}" %></a>
+      </li>
+    <% counter += 1 %>
+  <% end %>
+</ul>

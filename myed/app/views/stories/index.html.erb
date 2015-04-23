@@ -4,11 +4,7 @@
 
 
 <ul>
-  <% @categories.each do |category| %>
       <% @stories.each do |story| %>
       <li>  <%= link_to story.heading, story_path(story) %> </li>
       <% end %>
-  <% end %>
-
-
 </ul>

@@ -36,11 +36,10 @@ end
 
 categories = [
   {  name: "Volunteering"},
+  {  name: "Interpersonal Relationships"},
   {  name: "Vocational Training"},
   {  name: "Cultural Exposure"},
-  {  name: "Interpersonal Relationships"},
   {  name: "Other"}
-
 ]
 
 categories.each do |category_hash|
