@@ -1,3 +1,9 @@
 <h1><%= @category.name %></h1>
 
 <h2><%= @category.name %> Moments</h2>
+
+<ul>
+  <% Story.where(category: @category).each do |story| %>
+    <li><%= link_to story.heading, story_path(story) %></li>
+  <% end %>
+</ul>
