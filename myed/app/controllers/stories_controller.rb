@@ -12,13 +12,10 @@ class StoriesController < ApplicationController
   end
 
   def new
-    # @category_options = Category.all.map{|c| [ c.name, c.id ] }
     @story = Story.new
-    # @category = Category.find(params[:category_id])
   end
 
   def create
-    binding.pry
     @story = Story.new(story_params)
       if @story.save
         redirect_to(story_path(@story))
@@ -31,10 +28,16 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
   end
 
+  def update
+    @story = Story.find(params[:id])
+    @story.update(story_params)
+    redirect_to(@story)
+  end
+
   def destroy
-    @story = current_user.stories.find(params[:id])
+    @story = Story.find(params[:id])
     @story.destroy
-    redirect_to 'welcome#index'
+    redirect_to root_path
   end
 
   private

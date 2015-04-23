@@ -13,6 +13,8 @@
 
 <div class='profile-actions'>
 
+  <a href="/profiles/<%= @profile.id %>/edit">Edit</a>
+
   <form action="<%= profile_path(@profile) %>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="delete">
