@@ -13,32 +13,30 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   font-family: 'Coustard', serif;
+   color: #c7c0b8;
+   width: 60%;
+   background: #47392c;
+   text-align: center;
+ }
 
-body {
-  background: white;
-  text-align: left;
-}
+ h1 {
+   font-family: 'Anton', sans-serif;
+   color: #c7c0b8;
+   font-size: 40px;
+   padding: 0px;
+   margin: 0px;
+   text-align: center;
+ }
 
-h1 {
-  color: navy;
-  font-size: 40px;
-  padding: 0px;
-  margin: 0px;
-  text-align: left;
-}
+ ul {
+     list-style-type: none;
+     padding: 0px;
+     margin: 0px;
+ }
 
-ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-li {
-  padding: 0px;
-  margin: 0px;
-
-}
-
-a.list {
-  font-family: "Verdana", sans-serif;
-}
+ li {
+   padding: 0px;
+   margin: 0px;
+ } 
