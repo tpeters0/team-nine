@@ -1,48 +1,39 @@
 <h1>Add your story!</h1>
 
-<%= form_for @story do |f| %>
+<%= form_for([@category, @category.stories.build]) do |f| %>
 
 <div>
-  <select name="category_id">
-     <%= @category.each do |category| %>
-       <option value="<%= category.id %>"><%= category.name %></option>
-     <% end %>
-   </select>
-
-
-
-
-<!-- #<%= f.label       :category %>
-<%= f.text_field  :category %> -->
+  <%= f.label       :category %>
+  <%= f.select(:category_id, @category_options) %>
 </div>
 
 <div>
-<%= f.label       :heading %>
-<%= f.text_field  :heading %>
+  <%= f.label       :heading %>
+  <%= f.text_field  :heading %>
 </div>
 
 <div>
-<%= f.label       :body %>
-<%= f.text_field  :body %>
+  <%= f.label       :body %>
+  <%= f.text_field  :body %>
 </div>
 
 <div>
-<%= f.label       :lesson %>
-<%= f.text_field  :lesson %>
+  <%= f.label       :lesson %>
+  <%= f.text_field  :lesson %>
 </div>
 
 <div>
-<%= f.label       :photo_url %>
-<%= f.text_field  :photo_url %>
+  <%= f.label       :photo_url %>
+  <%= f.text_field  :photo_url %>
 </div>
 
 <div>
-<%= f.label       :profile_id %>
-<%= f.text_field  :profile_id %>
+  <%= f.label       :profile_id %>
+  <%= f.text_field  :profile_id %>
 </div>
 
 <div>
-<%= f.submit %>
+  <%= f.submit %>
 </div>
 
 <% end %>
