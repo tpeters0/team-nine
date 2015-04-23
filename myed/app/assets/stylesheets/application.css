@@ -13,30 +13,96 @@
  *= require_tree .
  *= require_self
  */
- body {
-   font-family: 'Coustard', serif;
-   color: #c7c0b8;
-   width: 60%;
-   background: #47392c;
-   text-align: center;
- }
+/*General page elements*/
+.logo {
+  text-align: center
+}
 
- h1 {
-   font-family: 'Anton', sans-serif;
-   color: #c7c0b8;
-   font-size: 40px;
-   padding: 0px;
-   margin: 0px;
-   text-align: center;
- }
+body { 
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #383737;
+  background: #7c7c7c;
+}
 
- ul {
-     list-style-type: none;
-     padding: 0px;
-     margin: 0px;
- }
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  color: #383737;
+  line-height: 28px;
+}
 
- li {
-   padding: 0px;
-   margin: 0px;
- } 
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #383737;
+  line-height: 20px;
+}
+
+.content {
+  background-color: #cccccc;
+  text-align: left;
+  margin: 0 20%;
+  padding: 10px;
+}
+
+/*a normal, unvisited link*/
+a:link {
+  text-decoration: none;
+  color: #668E39;
+}
+
+/*a link the user has visited*/
+a:visited {
+  text-decoration: none;
+  color: #96B566;
+}
+
+/*a link when the user mouses over it*/
+a:hover {
+  text-decoration: none;
+  color: #96B566;
+}
+/*a link the moment it is clicked*/
+a:active {
+  text-decoration: none;
+  color: #F6FF97;
+}
+
+/*Navigation elements*/
+.nav_bar {
+  background-color: #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a{
+  font-family: 'Oswald', sans-serif;
+  color: #47392c;
+  background-color: #cccccc;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #d3dac8;
+}
+
+.menu {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu li {
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.menu h1 {
+  display: inline;
+}
+/*end of nav_bar*/
+
+
+
+ 
