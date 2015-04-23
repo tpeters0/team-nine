@@ -7,6 +7,6 @@
 
 <ul>
   <% @profile.stories.each do |story| %>
-    <li><%= link_to story.heading, story_path(story) %></li>
+  <li>  <%= link_to story.heading, category_story_path(:category_id, story) %> </li>
   <% end %>
 </ul>
