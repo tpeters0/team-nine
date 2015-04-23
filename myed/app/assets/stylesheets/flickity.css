@@ -7,9 +7,68 @@ http://flickity.metafizzy.co
           box-sizing: border-box;
 }
 
+/*General page elements*/
 body { 
-  font-family: sans-serif; 
-  color: blue;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #383737;
+  background: #7c7c7c;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: #383737;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  line-height: 20px;
+}
+
+/*Navigation elements*/
+.nav_bar {
+  background-color: #cccccc;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a{
+  font-family: 'Oswald', sans-serif;
+  color: #47392c;
+  background-color: #cccccc;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #d3dac8;
+}
+
+.menu {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu li {
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.menu h1 {
+  display: inline;
+}
+
+/*Slider elements*/
+
+.slider {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .gallery-cell {

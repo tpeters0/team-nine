@@ -1,44 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*General page elements*/
+.logo {
+  text-align: center
+}
 
-body {
-  background: white;
-  text-align: left;
+body { 
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #383737;
+  background: #7c7c7c;
+  text-align: center;
 }
 
 h1 {
-  color: navy;
-  font-size: 40px;
-  padding: 0px;
-  margin: 0px;
-  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  color: #383737;
+  line-height: 28px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #383737;
+  line-height: 20px;
 }
 
-li {
-  padding: 0px;
-  margin: 0px;
-
+.content {
+  margin: 0 40%;
 }
 
-a.list {
-  font-family: "Verdana", sans-serif;
+/*Navigation elements*/
+.nav_bar {
+  background-color: #cccccc;
+  margin: 0;
+  padding: 0;
 }
+
+.menu a{
+  font-family: 'Oswald', sans-serif;
+  color: #47392c;
+  background-color: #cccccc;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #d3dac8;
+}
+
+.menu {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.menu li {
+  display: inline;
+  list-style-type: none;
+  padding: 20px;
+}
+
+.menu h1 {
+  display: inline;
+}
+/*end of nav_bar*/
+

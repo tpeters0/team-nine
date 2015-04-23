@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>L.I.F.E.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Coustard|Oswald|Amatic+SC|Handlee' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-  <header>
-    <h1>
-      <%= link_to "MyEd", root_path, :class => "list" %>
-    </h1>
 
-    <ul>
-      <li><%= link_to "Browse Moments", stories_path, :class => "list" %></li>
-      <li><%= link_to "Browse Profiles", profiles_path, :class => "list" %></li>
-      <li><%= link_to "Add Your Story", new_story_path, :class => "list" %></li>
-      <li><%= link_to "Login", new_user_session_path, :class => "list" %></li>
-      <li><%= link_to "Sign up", new_user_registration_path, :class => "list" %></li>
+<div class="logo">
+<%= link_to image_tag("life_logo.jpg"), root_path %>
+</div>
+
+  <div class="nav_bar">
+    <ul class="menu">
+      <li><%= link_to "Stories", stories_path, :class => "list" %></li>
+      <li><%= link_to "Profiles", profiles_path, :class => "list" %></li>
+      <li><%= link_to "Add A Story", new_story_path, :class => "list" %></li>
+          <% if user_signed_in? %>
       <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "list" %></li>
+          <% else %>
+      <li><%= link_to 'Login', new_user_session_path, :class => "list" %></li>
+      <% end %>
     </ul>
+  </div>
 
-  </header>
 
+<div class="content">
 <%= yield %>
+</div>
 
 </body>
 
