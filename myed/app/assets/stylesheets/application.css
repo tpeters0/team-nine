@@ -8,7 +8,6 @@ body {
   font-size: 18px;
   color: #383737;
   background: #7c7c7c;
-  text-align: center;
 }
 
 h1 {
@@ -26,7 +25,33 @@ h2 {
 }
 
 .content {
-  margin: 0 40%;
+  background-color: #cccccc;
+  text-align: left;
+  margin: 0 20%;
+  padding: 10px;
+}
+
+/*a normal, unvisited link*/
+a:link {
+  text-decoration: none;
+  color: #668E39;
+}
+
+/*a link the user has visited*/
+a:visited {
+  text-decoration: none;
+  color: #96B566;
+}
+
+/*a link when the user mouses over it*/
+a:hover {
+  text-decoration: none;
+  color: #96B566;
+}
+/*a link the moment it is clicked*/
+a:active {
+  text-decoration: none;
+  color: #F6FF97;
 }
 
 /*Navigation elements*/
