@@ -1,15 +1,20 @@
 <h1><%= @profile.name %></h1>
 
-<h2>Age: <%= @profile.age %></h2>
-<h2>Occupation: <%= @profile.occupation %></h2>
-<img src="<%= @profile.image %>">
-<h2>Moments:</h2>
+<div class="profile">
 
-<ul>
-  <% @profile.stories.each do |story| %>
-    <li><%= link_to story.heading, story_path(story) %></li>
-  <% end %>
-</ul>
+	<li><h4>Age: </h4>
+	<%= @profile.age %></li>
+	<li><h4>Occupation: </h4>
+	<%= @profile.occupation %></li>
+	<li><img src="<%= @profile.image %>"></li>
+	<li><h4>Stories: </h4></li>
+
+	<ul>
+	  <% @profile.stories.each do |story| %>
+	    <li><%= link_to story.heading, story_path(story) %></li>
+	  <% end %>
+	</ul>
+</div>
 
 <div class='profile-actions'>
 

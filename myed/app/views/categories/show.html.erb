@@ -1,9 +1,21 @@
 <h1><%= @category.name %></h1>
 
-<h2><%= @category.name %> Moments</h2>
+<ul>
+ <% @category.stories.each do |story| %>
+ <li>  <%= link_to story.heading, story_path(story) %> </li>
+ <% end %>
+</ul>
+
+<h3> Learn more </h3>
+<small>(Links to outside pages)</small>
 
 <ul>
-  <% Story.where(category: @category).each do |story| %>
-    <li><%= link_to story.heading, story_path(story) %></li>
-  <% end %>
+
+ <% counter = 0 %>
+ <% while counter < @links.length %>
+     <li>
+       <a href="<%= @links[counter][:link] %>" target="_blank"><%="#{@links[counter][:site]}" %></a>
+     </li>
+   <% counter += 1 %>
+ <% end %>
 </ul>

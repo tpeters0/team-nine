@@ -39,11 +39,56 @@ h2 {
   line-height: 20px;
 }
 
+h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  color: #383737;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  color: #614910;
+  line-height: 20px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding:3px;
+}
+
+small {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  color: #383737;
+  padding: 0;
+  margin: 0;
+}
 .content {
   background-color: #cccccc;
   text-align: left;
   margin: 0 20%;
   padding: 10px;
+}
+
+.story_image {
+  margin: auto;
+  width: 300px;
+}
+
+.story_image img {
+  width: 100%;
+  height: auto;
 }
 
 /*a normal, unvisited link*/
@@ -61,12 +106,34 @@ a:visited {
 /*a link when the user mouses over it*/
 a:hover {
   text-decoration: none;
-  color: #96B566;
-}
-/*a link the moment it is clicked*/
-a:active {
-  text-decoration: none;
   color: #F6FF97;
+}
+
+.categories {
+  display: inline-block;
+  margin: 0 15%;
+}
+
+.category_icon {
+  margin: auto;
+  padding: 10px;
+  display: inline-block;
+}
+
+.story_actions {
+  display: inline;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile h4 {
+  text-align: center;
+}
+
+.profile li {
+  list-style-type: none;
 }
 
 /*Navigation elements*/
