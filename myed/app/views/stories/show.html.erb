@@ -1,16 +1,18 @@
 <h1><%= @story.heading %></h1>
 <h2>Author: <%= link_to @story.profile.name, profile_path(@story.profile) %></h2>
-<ul>
-  <li>Category: <%= Category.find_by(id: @story.category_id).name %></li>
-  <li>Moment: <%= @story.body %></li>
-  <li>Lesson(s) Learned: <%= @story.lesson %></li>
-</ul>
-<img src="<%= @story.photo_url %>">
 
-<div class='story-actions'>
-
-  <a href="/stories/<%= @story.id %>/edit">Edit</a>
-
-  <%= button_to("Delete", story_path(@story), :method => :delete) %>
-
+<div class="story_image">
+	<img src="<%= @story.photo_url %>">
 </div>
+
+
+<ul>
+  <li><h4>Category: </h4><%= Category.find_by(id: @story.category_id).name %></li>
+  <li><h4>Learning Experience: </h4><%= @story.body %></li>
+  <li><h4>Lesson(s) Learned: </h4><%= @story.lesson %></li>
+</ul>
+
+<div class="story_actions">
+	<a href="/stories/<%= @story.id %>/edit">Edit</a> <%= button_to("Delete", story_path(@story), :method => :delete) %>
+</div>
+

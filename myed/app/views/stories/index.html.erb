@@ -1,19 +1,45 @@
-<h1>All stories</h1>
+<h1>Stories</h1>
 
-<h2>Sort by category</h2>
+<h2>Categories</h2>
 
-<ul>
-  <% @categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category) %></li>
-  <% end %>
-</ul>
+<div class="categories">
+	<a href= <%= "/categories/1" %> >
+		<div class="category_icon">
+			<img alt="volunteer" src="/assets/volunteer_icon.png" width="75" height="100">
+		</div>
+	</a>
 
-<h2>All moments</h2>
+	<a href= <%= "/categories/2" %> >
+		<div class="category_icon">
+			<img alt="Interpersonal Relationships" src="/assets/relationships_icon.png" width="75" height="100">
+		</div>
+	</a>
+
+	<a href= <%= "/categories/3" %> >
+		<div class="category_icon">
+			<img alt="Vocational Training" src="/assets/vocation_icon.png" width="75" height="100">
+		</div>
+	</a>
+
+	<a href= <%= "/categories/4" %> >
+		<div class="category_icon">
+			<img alt="Cultural Exposure" src="/assets/culture_icon.png" width="75" height="100">
+		</div>
+	</a>
+
+	<a href= <%= "/categories/5" %> >
+		<div class="category_icon">
+			<img alt="Other" src="/assets/other_icon.png" width="75" height="100">
+		</div>
+	</a>
+</div>
+
+<h2>Stories</h2>
 
 <ul>
   <% @stories.each do |story| %>
 
-  <li><%= link_to story.heading, story_path(story) %> Category: <%= link_to story.category.name, category_path(story.category) %></li>
+  <li><%= link_to story.heading, story_path(story) %></li>
 
   <% end %>
 </ul>

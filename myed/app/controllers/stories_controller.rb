@@ -8,6 +8,7 @@ class StoriesController < ApplicationController
   end
 
   def show
+    @category = Category.find(params[:id])
     @story = Story.find(params[:id])
   end
 

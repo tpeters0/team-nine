@@ -1,7 +1,8 @@
-<h1>All contributors</h1>
+<h1>Contributors</h1>
 
 <ul>
   <% @profiles.each do |profile| %>
+  <li><%= link_to profile.image %>
   <li><%= link_to profile.name, profile_path(profile) %>,  (<%= profile.age %>), <%= profile.occupation %></li>
   <% end %>
 </ul>
