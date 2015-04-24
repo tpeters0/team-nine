@@ -6,22 +6,22 @@
   </div>
 
   <div>
-   <%= f.label               :heading %>
+   <%= f.label               :heading, "Title" %>
    <%= f.text_field          :heading %>
   </div>
 
   <div>
-   <%= f.label               :body %>
-   <%= f.text_field          :body %>
+   <%= f.label               :body, "Share your experience" %>
+   <%= f.textarea            :body %>
   </div>
 
   <div>
-   <%= f.label               :lesson %>
+   <%= f.label               :lesson, "How did this experience benefit you?" %>
    <%= f.text_field          :lesson %>
   </div>
 
   <div>
-   <%= f.label               :photo_url, "Add a link to a photo" %>
+   <%= f.label               :photo_url, "Add a photo url" %>
    <%= f.text_field          :photo_url %>
   </div>
 

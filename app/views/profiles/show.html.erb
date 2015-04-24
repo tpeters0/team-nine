@@ -20,9 +20,6 @@
 
   <a href="/profiles/<%= @profile.id %>/edit">Edit</a>
 
-  <form action="<%= profile_path(@profile) %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="delete">
-  </form>
+  <%= button_to("Delete", profile_path(@profile), :method => :delete) %>
 
 </div>

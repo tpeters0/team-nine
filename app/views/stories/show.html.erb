@@ -13,6 +13,7 @@
 </ul>
 
 <div class="story_actions">
-	<a href="/stories/<%= @story.id %>/edit">Edit</a> <%= button_to("Delete", story_path(@story), :method => :delete) %>
+	<a href="/stories/<%= @story.id %>/edit">Edit</a> 
+	<%= button_to("Delete", story_path(@story), :method => :delete) %>
 </div>
 
