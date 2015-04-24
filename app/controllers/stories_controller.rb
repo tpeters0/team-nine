@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
 
-  before_action :existing_user, only: [:create, :new, :destroy]
+  before_action :existing_user, only: [:create, :new, :destroy, :edit, :update]
 
   def index
     @stories = Story.all
@@ -8,7 +8,6 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
     @story = Story.find(params[:id])
   end
 
