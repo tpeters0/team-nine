@@ -1,28 +1,40 @@
-== README
+== README FOR L.I.F.E. (Project 2 - Team 9)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* A website created with Ruby on Rails, deployed via heroku
+* Authentication is provided via Devise
+* Landing page slide utilizes Flickity
 
-Things you may want to cover:
+* The theme of this website/app is L.I.F.E. (Lessons In the Form of Experiences),
+<em>i.e.</em> the education that people gain through things that they do and see outside of a traditional
+ academic classroom.
 
-* Ruby version
+*The purpose of the web application is to provide a forum for users who are interested in means of learning
+by methods other than traditional academic programs.
 
-* System dependencies
+Specifically, the user should:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Be able to view the home page and arrow through the slider of pictures with quotes about experience and life as education
+2. Be able to use the navigation buttons to select what they would like to do or see next
+3. The user may view an index of stories that people have provided on the site about their own non-traditional learning experiences.
+The user may choose to view these stories by category.
+4. The user may view the profiles of others who belong to and have contributed to the website
+5. A user may select the option to share their own learning story.  If they are not logged in, they will be
+redirected to log in or sign-up to log in.
+6. When the user signs up, they create a secure log-in with password authentication.
+7. After sign-up, the user is prompted to create a profile, with name, age, and photo url.
+8. User can add their own story - pick a category, and add title, experience, and benefits of the experience.
+9. User can sort stories by category.  If they sort by category, links to external sites related to the category appear for them to click on to open a new window.
 
 
-Please feel free to use a different markup language if you do not plan to run
+* The categories of stories of learning experiences are:
+1. Volunteering
+2. Interpersonal Relationships
+3. Vocational Training
+4. Cultural Exposure
+5. Other
+
+* More task information and user stories can be found at: https://trello.com/b/O9CYPwVI/team-niner
+* Deployed at:  https://desolate-anchorage-5031.herokuapp.com/
+* Coding at: https://github.com/Tuzibun/team-nine
+
 <tt>rake doc:app</tt>.
