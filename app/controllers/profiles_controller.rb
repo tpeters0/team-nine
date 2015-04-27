@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
   def destroy
     @profile = Profile.find(params[:id])
     @profile.destroy
-    redirect_to 'welcome#index'
+    redirect_to root_path
   end
 
   private
